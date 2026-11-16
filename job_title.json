@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Pilot"
+  },
+  {
+    "id": 2,
+    "title": "Rettungssanitäter"
+  },
+  {
+    "id": 3,
+    "title": "Flugbegleiter"
+  },
+  {
+    "id": 4,
+    "title": "Bodenpersonal"
+  },
+  {
+    "id": 5,
+    "title": "Administrator"
+  }
+]

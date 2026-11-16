@@ -1,0 +1,47 @@
+[
+	{
+		"id": 1,
+		"name": "Sandro",
+		"lastname": "Kneubühl",
+		"birthdate": "27.06.1988",
+		"mail": "sandro@helga.ch",
+		"company": "Guggi Luggi Airline",
+		"jobTitle": [1]
+	},
+	{
+		"id": 2,
+		"name": "Stefanos",
+		"lastname": "Petrakis",
+		"birthdate": "05.03.1980",
+		"mail": "stefanos@helga.ch",
+		"company": "Guggi Luggi Airline",
+		"jobTitle": [3]
+	},
+	{
+		"id": 3,
+		"name": "Raphael",
+		"lastname": "Marti",
+		"birthdate": "24.01.1983",
+		"mail": "raphael@helga.ch",
+		"company": "Guggi Luggi Airline",
+		"jobTitle": [4,5]
+	},
+	{
+		"id": 4,
+		"name": "Brunhilde",
+		"lastname": "von Schaft",
+		"birthdate": "01.09.1965",
+		"mail": "hildi@helga.ch",
+		"company": "Django Supercopters",
+		"jobTitle": [2,5]
+	},
+	{
+		"id": 5,
+		"name": "Felix",
+		"lastname": "Steiner",
+		"birthdate": "02.03.1981",
+		"mail": "felix@helga.ch",
+		"company": "Guggi Luggi Airline",
+		"jobTitle": [2,3]
+	}
+]

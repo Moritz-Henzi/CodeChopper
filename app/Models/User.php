@@ -1,0 +1,56 @@
+<?php
+
+namespace App\Models;
+
+// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Concerns\FlushesTrainingMatrixCache;
+use Database\Factories\UserFactory;
+use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Attributes\Hidden;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
+
+#[Fillable(['name', 'email', 'password'])]
+#[Hidden(['password', 'remember_token'])]
+class User extends Authenticatable
+{
+    /** @use HasFactory<UserFactory> */
+    use FlushesTrainingMatrixCache, HasApiTokens, HasFactory, Notifiable;
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'email_verified_at' => 'datetime',
+            'password' => 'hashed',
+        ];
+    }
+
+    /**
+     * Get the job titles held by the user.
+     *
+     * @return BelongsToMany<JobTitle, $this>
+     */
+    public function jobTitles(): BelongsToMany
+    {
+        return $this->belongsToMany(JobTitle::class)->using(JobTitleUser::class);
+    }
+
+    /**
+     * Get the training completions of the user.
+     *
+     * @return HasMany<TrainingCompletion, $this>
+     */
+    public function trainingCompletions(): HasMany
+    {
+        return $this->hasMany(TrainingCompletion::class);
+    }
+}

@@ -1,0 +1,47 @@
+[
+	{
+		"id": 1,
+		"name": "Medical",
+		"expirationPeriod": 5,
+		"expiresEndOfMonth": false,
+		"expiresNever": false,
+		"renevalPeriod": 1,
+		"relatedJobTitle": [2]
+	},
+	{
+		"id": 2,
+		"name": "LPC SE",
+		"expirationPeriod": null,
+		"expiresEndOfMonth": false,
+		"expiresNever": true,
+		"renevalPeriod": 0,
+		"relatedJobTitle": [1, 3]
+	},
+	{
+		"id": 3,
+		"name": "OPC NIT",
+		"expirationPeriod": 5,
+		"expiresEndOfMonth": true,
+		"expiresNever": false,
+		"renevalPeriod": 12,
+		"relatedJobTitle": [1,3,4]
+	},
+	{
+		"id": 4,
+		"name": "Dangeours Goods",
+		"expirationPeriod": 5,
+		"expiresEndOfMonth": true,
+		"expiresNever": false,
+		"renevalPeriod": 1,
+		"relatedJobTitle": [1,2,3,4,5]
+	},
+	{
+		"id": 5,
+		"name": "English Prof. Level 5",
+		"expirationPeriod": 1,
+		"expiresEndOfMonth": false,
+		"expiresNever": false,
+		"renevalPeriod": 1,
+		"relatedJobTitle": [1,2,3,5]
+	}
+]
